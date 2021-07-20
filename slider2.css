@@ -1,0 +1,79 @@
+/* Shopee Mall Slider */
+.sm-slider{
+    width: 390px;
+    height: 450px;
+    overflow: hidden;
+    position: relative;
+}
+.sm-slides{
+    display: flex;
+    width: 300%;
+    height: 450px;
+}
+.sm-slides input{
+    display: none;
+}
+.sm-slide{
+    transition: 0.5s;
+}
+.sm-slide img{
+    width: 390px;
+    height: 450px;
+}
+.sm-navigation-manual{
+    position: absolute;
+    width: 390px;
+    display: flex;
+    justify-content: center;
+    bottom: 10px;
+}
+.sm-manual-btn{
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: hsla(0,0%,100%,.4);
+
+}
+.sm-manual-btn:not(:last-child){
+    margin-right: 10px;
+}
+
+#sm-radio1:checked ~ .first{
+    margin-left: 0;
+}
+#sm-radio2:checked ~ .first{
+    margin-left: -33.33%;
+}
+#sm-radio3:checked ~ .first{
+    margin-left: -66.66%;
+}
+
+/* CSS automatic navigation*/
+
+.sm-navigation-auto{
+    position: absolute;
+    width: 390px;
+    display: flex;
+    justify-content: center;
+    bottom: 10px;
+}
+.sm-navigation-auto div{
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: hsla(0,0%,100%,.4);
+}
+.sm-navigation-auto div:not(:last-child){
+    margin-right: 10px;
+}
+
+#sm-radio1:checked ~ .sm-navigation-auto .sm-auto-btn1{
+    background-color: red;
+}
+#sm-radio2:checked ~ .sm-navigation-auto .sm-auto-btn2{
+    background-color: red;
+}
+#sm-radio3:checked ~ .sm-navigation-auto .sm-auto-btn3{
+    background-color: red;
+}
+
